@@ -1,0 +1,89 @@
+﻿@model NewspaperKart.CTSModel.Customer
+
+@{
+    ViewData["Title"] = "AddCustomer";
+}
+
+<div class="justify-content-xl-center" align="center">
+
+    <h1>Subscribe</h1>
+
+    <div>
+        <a asp-action="MySubscription" asp-controller="Customer" class="btn btn-outline-success">My Subscriptions</a>
+    </div>
+
+    <hr />
+    <div class="">
+        <div class="col-md-4">
+            <form asp-action="AddCustomer">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label">Name</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Address" class="control-label">Address</label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Mobile" class="control-label">Mobile</label>
+                    <input asp-for="Mobile" class="form-control" />
+                    <span asp-validation-for="Mobile" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label">Newspaper Title</label>
+                    @*<input asp-for="Title" class="form-control" />*@
+                <select asp-for="Title" class="form-control" asp-items="ViewBag.Id">
+                    <option value="">Select</option>
+
+                    <option value="Digital">Times of India</option>
+                    <option value="Indian Express">Indian Express</option>
+
+                    <option value="Deccan Chronicle">Deccan Chronicle</option>
+                    <option value="Hindustan Times">Hindustan Times</option>
+                    <option value="Business Standard">Business Standard</option>
+
+
+                </select>
+
+
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Subscriptiontype" class="control-label">Subscription Type</label>
+                    @*<input asp-for="Subscriptiontype" class="form-control" />*@
+                    <select asp-for="Subscriptiontype" class="form-control">
+                        <option value="">Select</option>
+
+                        <option value="Digital">Digital</option>
+                        <option value="Print">Print</option>
+
+                    </select>
+                    <span asp-validation-for="Subscriptiontype" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Timeperiod" class="control-label">Time Period</label>
+                    @*<input asp-for="Timeperiod" class="form-control" />*@
+                    <select asp-for="Timeperiod" class="form-control" asp-items="ViewBag.TimePeriod">
+                        <option value="">Select</option>
+
+                        <option value="Monthly">Monthly</option>
+                        <option value="Annual">Annual</option>
+
+                    </select>
+                    <span asp-validation-for="Timeperiod" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-outline-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index" asp-controller="Home" class="btn btn-outline-dark">Back</a>
+    </div>
+
+</div>

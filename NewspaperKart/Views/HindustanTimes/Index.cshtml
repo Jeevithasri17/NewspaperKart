@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<head>
+    <style>
+        #price {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #price td, #price th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #price tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            #price tr:hover {
+                background-color: #ddd;
+            }
+
+            #price th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+                color: white;
+            }
+    </style>
+</head>
+
+<div class="justify-content-xl-center" align="center">
+
+
+    <h1>Hindustan Times</h1>
+
+    <img src="https://www.newspaperkart.com/media/newsletter/hindustan%20times-1473585586.png" width="300" height="200" />
+    <br />
+    <br />
+    <p>
+        HINDUSTAN TIMES Media found its beginning in 1924 when its flagship newspaper, Hindustan Times was inaugurated by Mahatma Gandhi. HT Media has today grown to become one of India's largest media companies. Produced by an editorial team known for its quality, innovation and integrity, Hindustan Times is the choice for nearly 3.7 million readers across India, who turn to it daily for news, information, analysis and entertainment. Hindustan Times subscription offers are listed below. Don’t miss another issue, subscribe today!
+    </p>
+
+    <table id="price">
+        <tr>
+            <th>Price/Month</th>
+            <th>Cash for Scrap</th>
+            <th>Save Upto</th>
+        </tr>
+        <tr>
+            <td>Rs.160</td>
+            <td>Rs.140</td>
+            <td>25%</td>
+        </tr>
+
+    </table>
+    <br />
+
+    @*<div>
+            <a asp-action="Index" asp-controller="Subscription" class="btn btn-outline-success">Subscribe</a>
+        </div>*@
+    <br />
+    <div>
+        <a asp-action="Index" asp-controller="Home" class="btn btn-outline-dark">Back</a>
+    </div>
+    </div>

@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<head>
+    <style>
+        #price {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #price td, #price th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #price tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            #price tr:hover {
+                background-color: #ddd;
+            }
+
+            #price th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+                color: white;
+            }
+    </style>
+</head>
+
+<div class="justify-content-xl-center" align="center">
+
+
+    <h1>The Hindu</h1>
+
+    <img src="https://www.newspaperkart.com/media/newsletter/850436_screen_shot_2019_09_27_at_10.58.33_pm.png" width="300" height="200" />
+    <br />
+    <br />
+    <p>
+        Get Premium Subscription of Hindu E-Paper at lowest price across the web. Benefits of E-Paper Include :
+    </p>
+
+    <p> Exact replica of your daily newspaper</p>
+    <p>
+        Acess to premium Hindu Content
+    </p>
+    <p>
+        Completely Downloadable pdf
+    </p>
+    <p>
+        Access to Old Papers and Archives
+    </p>
+
+
+    <table id="price">
+        <tr>
+            <th>Price/Month</th>
+            <th>Cash for Scrap</th>
+            <th>Save Upto</th>
+        </tr>
+        <tr>
+            <td>Rs.160</td>
+            <td>Rs.140</td>
+            <td>25%</td>
+        </tr>
+
+    </table>
+
+    <br />
+
+    @*<div>
+            <a asp-action="Index" asp-controller="Subscription" class="btn btn-outline-success">Subscribe</a>
+        </div>*@
+    <br />
+    <div>
+        <a asp-action="Index" asp-controller="Home" class="btn btn-outline-dark">Back</a>
+    </div>
+
+</div>
